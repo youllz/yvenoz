@@ -1,0 +1,159 @@
+---
+ let cardsData = {
+		motor: [
+			{
+				img: '/motorisation-portail/product1.jpg',
+				title: 'Kit de motorisation portail battant'
+			},
+			{
+				img: '/motorisation-portail/product2.jpg',
+				title: 'Kit de motorisation portail battant'
+			},
+			{
+				img: '/motorisation-portail/product3.jpg',
+				title: 'Kit de motorisation portail coulissant'
+			}
+		],
+
+		barriere: [
+			{
+				img: '/barriere/product1.jpg',
+				title: 'Barrière automatique '
+			},
+			{
+				img: '/barriere/product2.jpg',
+				title: 'Kit de barrière à chaine'
+			},
+			{
+				img: '/barriere/product3.jpg',
+				title: 'Tambour de sécurité pour accès piéton'
+			},
+			{
+				img: '/barriere/product4.jpg',
+				title: 'Portillon tripode'
+			},
+			{
+				img: '/barriere/product5.jpg',
+				title: 'Porte automatique'
+			}
+		],
+
+		porteGarage: [
+			{
+				img: '/porte-garage/product1.jpg',
+				title: ''
+			},
+			{
+				img: '/porte-garage/product2.jpg',
+				title: 'Kits complets pour de garage'
+			},
+			{
+				img: '/porte-garage/product3.jpg',
+				title: 'Moteur pour porte de garage'
+			},
+			// {
+			// 	img: '/porte-garage/product4.jpg',
+			// 	title: ''
+			// },
+			// {
+			// 	img: '/porte-garage/product5.jpg',
+			// 	title: ''
+			// }
+		]
+	};
+---
+
+
+<section id="produits">
+  <article>
+    <h3>
+      BARRIERE LEVANTE TRIPODE ET TOURNIQUET
+    </h3>
+    <div class="products">
+      {cardsData.barriere.map((item) => (
+        <div class="card">
+          <figure>
+      <img src={item.img} alt={item.title}>
+     </figure>
+     <h4>
+       {item.title}
+     </h4>
+          </div>
+        
+      ))}
+    </div>
+  </article>
+  
+
+  <article>
+    <h3>
+    MOTORISATION PORTAIL
+  </h3>
+  <div class="products">
+      {cardsData.motor.map((item) => (
+        <div class="card">
+          <figure>
+      <img src={item.img} alt={item.title}>
+     </figure>
+     <h4>
+       {item.title}
+     </h4>
+          </div>
+        
+      ))}
+    </div>
+
+    <div>
+      </article>
+      <article>
+
+        <h3>
+    PORTE DE GARAGE
+  </h3>
+  <div class="products">
+        {cardsData.porteGarage.map((item) => (
+          <div class="card">
+            <figure>
+        <img src={item.img} alt={item.title}>
+       </figure>
+       <h4>
+         {item.title}
+       </h4>
+            </div>
+          
+        ))}
+      </div>
+      </div>
+      </article>
+</section>
+
+<style>
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+  
+  article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h3 {
+    color: var(--accent);
+  }
+</style>

@@ -1,0 +1,86 @@
+---
+import logo1 from '../images/logo/KONE_logo.svg'
+import logo2 from '../images/logo/came-nice.svg'
+import logo3 from '../images/logo/faac.jpg'
+import logo4 from '../images/logo/ditec-logo.svg'
+import logo5 from '../images/logo/lift-master.jpeg'
+import logo6 from '../images/logo/logo_somfy_2.png'
+import logo7 from '../images/logo/logo-big-bft.svg'
+import logo8 from '../images/logo/logo-portalp.png'
+
+
+const logoData = [
+		{
+			name: 'Came Nice',
+			img: logo2
+		},
+		{
+			name: 'Ditec',
+			img: logo4
+		},
+		{
+			name: 'FAAC',
+			img: logo3
+		},
+		{
+			name: 'KONE',
+			img: logo1
+		},
+		{
+			name: 'Lift Master',
+			img: logo5
+		},
+		{
+			name: 'Somfy',
+			img: logo6
+		},
+		{
+			name: 'BFT',
+			img: logo7
+		},
+		{
+			name: 'Portalp',
+			img: logo8
+		}
+	];
+---
+
+<section>
+
+  <p>
+    YVENOZ et ses marques partenaires certifie CE, vous garantissent du materiel de qualite et
+        faisons de la satisfaction client notre priorite
+  </p>
+
+  <div class="container">
+   {logoData.map((item) => (
+    <div>
+        <img src={item.img} alt={item.name}>
+        </div>
+   ))}
+  </div>
+</section>
+
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    grid-auto-rows: 50px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+  p {
+    text-align: center;
+  }
+</style>

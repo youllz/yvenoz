@@ -1,0 +1,120 @@
+---
+import img1 from '../images/services/caroussel-img1.webp'
+import img2 from '../images/services/caroussel-img2.jpg'
+import img3 from '../images/services/caroussel-img4.webp'
+import Button from './Button.astro';
+---
+
+
+<section id="services">
+  <div class="card">
+    <div class="desc">
+      <h3>
+        MOTORISATION <br> PORTAIL
+      </h3>
+      <p>
+        Plus que jamais il est nécessaire de réguler les entrees <br> et sorties de nos parkings  et résidences, YVENOS vous propose des <br> kits de motorisations adaptées à tout type de portes  (battante, coulissantes...)
+        </p>
+    </div>
+    <figure class="service-img-1">
+      <img src={img3} alt="Motorisation Portail">
+    </figure>
+  </div>
+  <div class="card">
+    <figure class="service-img-2">
+      <img src={img1} alt="Porte de Garage">
+    </figure>
+    <div class="desc">
+      <h3>
+        PORTE GE <br> GARAGE
+       </h3>
+       <p>
+         Nos kits de motorisations sont robustes <br> et s'adapteront entièrement à vos portes <br> de garages qu'elles soient en accordéon ou basculantes <br>
+       </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="desc">
+      <h3>
+        BARRIERE LEVANTE <br> TRIPODE ET TOURNIQUET
+       </h3>
+       <p>
+         Les barrières automatiques sont un atout majeur <br> dans la gestion du flux de véhicules <br> dans les établissements ou en résidences
+         </p>
+    </div>
+    <figure class="service-img-3">
+      <img src={img2} alt=" Barriere levante tripode tourniquet">
+    </figure>
+  </div>
+
+  <div class="text">
+		<p>
+			Pour répondre aux besoins en constante évolution de nos clients,  nous priorisons la
+			modernisation de nos offres de produits.
+		</p>
+		<p>
+			Nous restons informés des dernières avancées
+			technologiques et des tendances du marché, ce qui nous permet d’intégrer des
+			fonctionnalités de pointe dans nos matériaux d’automatisation
+		</p>
+    <Button>
+
+    </Button>
+	</div>
+  
+</section>
+
+<style lang="scss">
+  section {
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10vw;
+  }
+
+  section > div {
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    // flex-wrap: wrap;
+    gap: 20px;
+    // background-color: rebeccapurple;
+  }
+
+  figure {
+    height: clamp(400px, 30vw + 0.1rem, 10rem);
+    width: clamp(600px, 30vw + 0.1rem, 10rem);
+     // width: 600px;
+  }
+
+  h3 {
+    font-size: clamp(25px, 2vw + 0.1rem, 3rem);
+  }
+
+  img {
+    object-position: bottom;
+  }
+
+  .text {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 40%;
+	}
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  section .card:nth-child(1) {
+    align-self: flex-end;
+    text-align: right;
+  }
+  section .card:nth-child(3) {
+    align-self: flex-end;
+    text-align: right;
+  }
+</style>

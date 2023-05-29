@@ -1,0 +1,35 @@
+---
+import img from '../images/about.webp'
+---
+
+<section>
+  <div class="desc">
+    <p>
+      Nos systèmes d’automatisation de portail sont conçus pour rationaliser le contrôle d’accès et fournir une entrée et une sortie transparente pour les espaces résidentiels, commerciaux et industriels.
+    </p>
+    <p>
+      Que vous ayez besoin d’un système robuste pour les opérations à grande échelle ou d’une solution personnalisée pour votre maison, nous offrons un large choix de matériaux d’automatisation de portail fiables et durables.
+    </p>
+  </div>
+  <div class="img">
+    <img src={img} alt="ouvrier">
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding-right: 5rem;
+  }
+</style>
+

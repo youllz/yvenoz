@@ -1,0 +1,41 @@
+---
+const {title} = Astro.props
+---
+
+
+<div class="card">
+  <div class="icon">
+    <slot name="icon"/>
+
+  </div>
+  <span class="title">
+    {title}
+  </span>
+ <slot name="content"/>
+</div>
+
+<style>
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  background-color: var(--secondary-button);
+  border-radius: 6px;
+}
+
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.icon {
+  
+  color: var(--primary-button);
+}
+
+
+
+
+
+</style>
