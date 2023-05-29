@@ -117,4 +117,34 @@ import Button from './Button.astro';
     align-self: flex-end;
     text-align: right;
   }
+
+  @media (max-width: 800px) {
+  .card {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  section {
+    align-items: center;
+    
+  }
+
+  section .card:nth-child(1), section .card:nth-child(3) {
+    text-align: left;
+  }
+
+ 
+  section .card:nth-child(2)  {
+    flex-direction: column-reverse;
+    
+  }
+
+  figure {
+    width: 100%;
+  }
+
+  .text {
+    width: 80%;
+  }
+  
+}
 </style>

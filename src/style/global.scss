@@ -70,3 +70,15 @@ section {
   padding: 5rem 3vw;
   margin: 5vw 0;
 }
+
+@media (max-width: 800px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 290px) {
+  html {
+    font-size: 75%;
+  }
+}

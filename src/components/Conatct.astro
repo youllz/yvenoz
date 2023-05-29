@@ -40,12 +40,18 @@
         CELL
       </p>
       <div>
-        <span>
-          +225 07 24 32 09  / +225 01 03 69 60 09
-        </span>
-        <span>
-          33(0) 623 28 19 63
-        </span>
+        <ul>
+          <li>
+            +225 07 24 32 09  
+          </li>
+          <li>
+            +225 01 03 69 60 09
+          </li>
+
+          <li>
+            33(0) 623 28 19 63
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -111,10 +117,12 @@
       gap: 15px;
     }
   
-    .phone > div {
+    .phone ul {
       display: flex;
       flex-direction: column;
       gap: 5px;
+      color: var(--primary-button);
+      font-size: 2rem;
     }
   
     .mail span  {
@@ -142,5 +150,44 @@
    transform: scaleX(0);
   }
 
+  @media (max-width: 800px) {
+    section {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-right {
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-right p {
+      text-align: center;
+
+    }
+
+    .contact-right span, li {
+      font-size: 1.3rem;
+    }
+
+    p, h2 {
+      text-align: center;
+    }
+
+    .contact-left {
+      padding: 0;
+    }
+  }
+
+  .phone > div {
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 950px) {
+    .contact-right span, li {
+      font-size: 1.3rem;
+    }
+  }
 
 </style>

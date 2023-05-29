@@ -14,13 +14,13 @@
 		<span>kits</span>
 		<ul>
 			<li>
-				<a href="/produits#motorisation-portail">Motorisation portail</a>
+				<a href="#motorisation-portail">Motorisation portail</a>
 			</li>
 			<li>
-				<a href="/produits/#porte-garage">Porte de garage</a>
+				<a href="#porte-garage">Porte de garage</a>
 			</li>
 			<li>
-				<a href="/produits/#barriere">Barrière levante et tourniquet</a>
+				<a href="#barriere-levante">Barrière levante et tourniquet</a>
 			</li>
 		</ul>
 	</div>
@@ -62,4 +62,29 @@
   a, li {
     color: var(--primary-button);
   }
+
+
+	@media (max-width: 830px) {
+  section {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+	@media (max-width: 460px) {
+  section {
+		grid-template-columns: 1fr;
+	}
+
+	section > div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
 </style>

@@ -45,7 +45,7 @@ import img4 from '../images/hero-img-4.webp'
 
 
 
-<style>
+<style lang="scss">
 
 #accueil {
 
@@ -75,6 +75,8 @@ import img4 from '../images/hero-img-4.webp'
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding-inline: 3vw;
+
+   
   }
 
   figure {
@@ -89,4 +91,11 @@ import img4 from '../images/hero-img-4.webp'
   img:hover {
     transform: scale(1.1);
   }
+
+
+  @media (max-width: 1250px) {
+  .hero-img {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 </style>

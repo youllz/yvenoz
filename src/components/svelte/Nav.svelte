@@ -1,15 +1,41 @@
+<script>
+    import { slide } from "svelte/transition";
+    import {quadInOut} from 'svelte/easing'
+  import ResponsiveNav from "./ResponsiveNav.svelte";
+  import {navToggle} from '../../store/store'
+  let windowW
+  
+</script>
+
+<svelte:window bind:innerWidth={windowW} />
+
 <nav>
   <div class="logo"></div>
-  <ul>
-    <li><a href="/">ACCUEIL</a></li>
-    <li><a href="#services">SERVICES</a></li>
-    <li><a href="#produits">PRODUITS</a></li>
-    <li><a href="#contacts">CONTACTS</a></li>
-  </ul>
-  <button class="navBtn">
+  {#if $navToggle && windowW < 700}
+  <div class="nav"  transition:slide={{axis: 'x', duration: 500, easing: quadInOut}}>
+    <ResponsiveNav />
+
+  </div>
+  {/if}
+  
+  
+  {#if windowW > 700 }
+    <ul >
+      <li><a href="/">ACCUEIL</a></li>
+      <li><a  href="#services">SERVICES</a></li>
+      <li><a  href="#produits">PRODUITS</a></li>
+      <li><a  href="#contacts">CONTACTS</a></li>
+    </ul>
+  {/if}
+
+  {#if windowW < 700}
+    
+  <button class="navBtn" on:click={() => {$navToggle = !$navToggle}}  >
     <span></span>
     <span></span>
   </button>
+  {/if}
+  
 </nav>
 
 
@@ -23,6 +49,14 @@
     align-items: center;
     padding: 20px 5vw;
 
+  }
+
+  .nav {
+    height: 100dvh;
+    width: 100dvw;
+    position: fixed;
+    top: 0;
+    right: 0;
   }
     ul {
       display: flex;
@@ -103,9 +137,7 @@
     
   }
 
-  button span:nth-child(1) {
-    
-  }
+  
 
   @media (max-width: 550px) {
     ul {
