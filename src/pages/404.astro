@@ -1,0 +1,70 @@
+---
+import '../style/global.scss'
+---
+
+
+<section>
+<header>
+  <h1>Yvenoz Services</h1>
+</header>
+
+<div>
+  <h2>404</h2>
+  <h2> page non trouvée</h2>
+</div>
+
+<a href="/">revenir a la page d'accueil</a>
+</section>
+
+<style>
+  section {
+
+    
+    height: 100dvh;
+    width: 100vw;
+    background-color: var(--primary);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  h1 {
+    font-size: clamp(20px, 10vw + 0.1rem, 7rem);
+    color: var(--accent);
+  }
+
+  div h2:nth-child(1) {
+    font-size: clamp(15px, 15vw + 0.1rem, 7rem);
+    color: var(--secondary);
+    text-align: center;
+  }
+
+  h2 {
+    color: var(--secondary);
+  }
+
+  a {
+    color: var(--primary-button);
+    font-size: 1.7rem;
+    position: relative;
+  }
+
+  a::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    display: block;
+    background-color: var(--primary-button);
+    bottom: -1px;
+    transform: translateX(1);
+    transform-origin: left;
+  }
+
+ 
+
+
+</style>
