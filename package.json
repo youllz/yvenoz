@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/svelte": "^2.2.0",
     "astro": "^2.5.5",
+    "sal.js": "^0.8.5",
     "svelte": "^3.54.0"
   },
   "devDependencies": {

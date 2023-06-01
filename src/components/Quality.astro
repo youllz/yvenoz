@@ -4,25 +4,29 @@ import QualityCard from "./QualityCard.astro";
 ---
 
 <section>
-  <h2>
+  <h2
+  data-sal="slide-up"
+  data-sal-delay="300"
+  data-sal-easing="ease-out-back" data-sal-duration="1000">
+  
     Découvrez la puissance des systèmes automatisés pour vos besoins quotidiens
   </h2>
 
   <div class="card-container">
-    <QualityCard title={"securite"}>
+    <QualityCard title={"securite"} salDuration={"1000"}  salDelay={"100"}>
       
       <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9 21v-6a2 2 0 0 1 2-2h1.341"/><path d="M19.682 10.682L12 3l-9 9h2v7a2 2 0 0 0 2 2h5"/><path d="M22 16c0 4-2.5 6-3.5 6S15 20 15 16c1 0 2.5-.5 3.5-1.5c1 1 2.5 1.5 3.5 1.5z"/></g></svg>
       <p slot="content">
         Notre équipe d’experts évalue et améliore continuellement nos mesures de sécurité pour rester en avance sur les menaces émergentes. Rassurez-vous, lorsque vous choisissez nos matériaux d’automatisation, vous choisissez des solutions fiables et sécurisées qui assurent la tranquillité d’esprit et la protection de vos actifs précieux.
       </p>
     </QualityCard>
-    <QualityCard title={"MODERNE"}>
+    <QualityCard title={"MODERNE"}   salDuration={"1000"} salDelay={"400"}>
       <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3.783 2.826L12 1l8.217 1.826a1 1 0 0 1 .783.976v9.987a6 6 0 0 1-2.672 4.992L12 23l-6.328-4.219A6 6 0 0 1 3 13.79V3.802a1 1 0 0 1 .783-.976ZM13 10V5l-5 7h3v5l5-7h-3Z"/></svg>
       <p slot="content">
         Nos produits mettent en valeur l’innovation de pointe et intègrent les dernières tendances de l’industrie. Des capteurs de pointe et de la connectivité intelligente aux interfaces utilisateur intuitives, nos matériaux sont conçus pour apporter efficacité et commodité à vos systèmes d’automatisation.
       </p>
     </QualityCard>
-    <QualityCard title={"SOLIDE"}>
+    <QualityCard title={"SOLIDE"}  salDuration={"1000"} salDelay={"600"}>
       <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="currentColor"><path d="M3 11.991c0 5.638 4.239 8.375 6.899 9.536c.721.315 1.082.473 2.101.473V8l-9 3v.991Z"/><path d="M14.101 21.527C16.761 20.365 21 17.63 21 11.991V11l-9-3v14c1.02 0 1.38-.158 2.101-.473ZM8.838 2.805L8.265 3c-3.007 1.03-4.51 1.545-4.887 2.082C3 5.62 3 7.22 3 10.417V11l9-3V2c-.811 0-1.595.268-3.162.805Z" opacity=".5"/><path d="m15.735 3l-.573-.195C13.595 2.268 12.812 2 12 2v6l9 3v-.583c0-3.198 0-4.797-.378-5.335c-.377-.537-1.88-1.052-4.887-2.081Z"/></g></svg>
       <p slot="content">
         Nous nous engageons à livrer des produits qui sont conçus pour durer et résister aux rigueurs de l’utilisation quotidienne. Nos matériaux sont méticuleusement fabriqués avec des matériaux de haute qualité et subissent des tests rigoureux pour assurer une durabilité et une longévité exceptionnelles

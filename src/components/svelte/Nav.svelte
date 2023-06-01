@@ -21,7 +21,7 @@
   
   {#if windowW > 700 }
     <ul >
-      <li><a href="/">ACCUEIL</a></li>
+      <li><a href="#accueil">ACCUEIL</a></li>
       <li><a  href="#services">SERVICES</a></li>
       <li><a  href="#produits">PRODUITS</a></li>
       <li><a  href="#contacts">CONTACTS</a></li>
@@ -134,6 +134,7 @@
     display: block;
     height: 3px;
     width: 30px;
+    
     
   }
 

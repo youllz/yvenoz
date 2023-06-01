@@ -1,9 +1,9 @@
 ---
-const {title} = Astro.props
+const {title, salDuration, salDelay} = Astro.props
 ---
 
 
-<div class="card">
+<div class="card"  data-sal="zoom-in"  data-sal-duration={salDuration} data-sal-delay={salDelay}>
   <div class="icon">
     <slot name="icon"/>
 

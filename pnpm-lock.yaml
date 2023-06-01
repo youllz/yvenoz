@@ -7,6 +7,9 @@ dependencies:
   astro:
     specifier: ^2.5.5
     version: 2.5.5(sass@1.62.1)
+  sal.js:
+    specifier: ^0.8.5
+    version: 0.8.5
   svelte:
     specifier: ^3.54.0
     version: 3.59.1
@@ -2647,6 +2650,11 @@ packages:
 
   /safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
+    dev: false
+
+  /sal.js@0.8.5:
+    resolution: {integrity: sha512-KUb3fNrVZ1oWxxkEAfQfQ4Mrd910yboIRHqsvioBkulQInqMVeSMah+J5f7ch7KXFLicKlAaE0TzTsG/eJ02Dg==}
+    engines: {node: '>=12.0.0'}
     dev: false
 
   /sass-formatter@0.7.6:
