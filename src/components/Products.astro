@@ -1,132 +1,118 @@
 ---
- let cardsData = {
-		motor: [
-			{
-				img: '/motorisation-portail/product1.jpg',
-				title: 'Kit de motorisation portail battant'
-			},
-			{
-				img: '/motorisation-portail/product2.jpg',
-				title: 'Kit de motorisation portail battant'
-			},
-			{
-				img: '/motorisation-portail/product3.jpg',
-				title: 'Kit de motorisation portail coulissant'
-			}
-		],
+let cardsData = {
+  motor: [
+    {
+      img: "/motorisation-portail/product1.webp",
+      title: "Kit de motorisation portail battant",
+    },
+    {
+      img: "/motorisation-portail/product2.webp",
+      title: "Kit de motorisation portail battant",
+    },
+    {
+      img: "/motorisation-portail/product3.webp",
+      title: "Kit de motorisation portail coulissant",
+    },
+  ],
 
-		barriere: [
-			{
-				img: '/barriere/product1.jpg',
-				title: 'Barrière automatique '
-			},
-			{
-				img: '/barriere/product2.jpg',
-				title: 'Kit de barrière à chaine'
-			},
-			{
-				img: '/barriere/product3.jpg',
-				title: 'Tambour de sécurité pour accès piéton'
-			},
-			{
-				img: '/barriere/product4.jpg',
-				title: 'Portillon tripode'
-			},
-			{
-				img: '/barriere/product5.jpg',
-				title: 'Porte automatique'
-			}
-		],
+  barriere: [
+    {
+      img: "/barriere/product1.webp",
+      title: "Barrière automatique ",
+    },
+    {
+      img: "/barriere/product2.webp",
+      title: "Kit de barrière à chaine",
+    },
+    {
+      img: "/barriere/product3.webp",
+      title: "Tambour de sécurité pour accès piéton",
+    },
+    {
+      img: "/barriere/product4.webp",
+      title: "Portillon tripode",
+    },
+    {
+      img: "/barriere/product5.webp",
+      title: "Porte automatique",
+    },
+  ],
 
-		porteGarage: [
-			{
-				img: '/porte-garage/product1.jpg',
-				title: ''
-			},
-			{
-				img: '/porte-garage/product2.jpg',
-				title: 'Kits complets pour de garage'
-			},
-			{
-				img: '/porte-garage/product3.jpg',
-				title: 'Moteur pour porte de garage'
-			},
-			// {
-			// 	img: '/porte-garage/product4.jpg',
-			// 	title: ''
-			// },
-			// {
-			// 	img: '/porte-garage/product5.jpg',
-			// 	title: ''
-			// }
-		]
-	};
+  porteGarage: [
+    {
+      img: "/porte-garage/product1.webp",
+      title: "",
+    },
+    {
+      img: "/porte-garage/product2.webp",
+      title: "Kits complets pour de garage",
+    },
+    {
+      img: "/porte-garage/product3.webp",
+      title: "Moteur pour porte de garage",
+    },
+    // {
+    // 	img: '/porte-garage/product4.webp',
+    // 	title: ''
+    // },
+    // {
+    // 	img: '/porte-garage/product5.jpg',
+    // 	title: ''
+    // }
+  ],
+};
 ---
-
 
 <section id="produits">
   <article id="barriere-levante">
-    <h3>
-      BARRIERE LEVANTE TRIPODE ET TOURNIQUET
-    </h3>
+    <h3>BARRIERE LEVANTE TRIPODE ET TOURNIQUET</h3>
     <div class="products">
-      {cardsData.barriere.map((item) => (
-        <div class="card">
-          <figure>
-      <img src={item.img} alt={item.title}>
-     </figure>
-     <h4>
-       {item.title}
-     </h4>
+      {
+        cardsData.barriere.map((item) => (
+          <div class="card">
+            <figure>
+              <img src={item.img} alt={item.title} />
+            </figure>
+            <h4>{item.title}</h4>
           </div>
-        
-      ))}
+        ))
+      }
     </div>
   </article>
-  
 
   <article id="motorisation-portail">
-    <h3>
-    MOTORISATION PORTAIL
-  </h3>
-  <div class="products">
-      {cardsData.motor.map((item) => (
-        <div class="card">
-          <figure>
-      <img src={item.img} alt={item.title}>
-     </figure>
-     <h4>
-       {item.title}
-     </h4>
+    <h3>MOTORISATION PORTAIL</h3>
+    <div class="products">
+      {
+        cardsData.motor.map((item) => (
+          <div class="card">
+            <figure>
+              <img src={item.img} alt={item.title} />
+            </figure>
+            <h4>{item.title}</h4>
           </div>
-        
-      ))}
+        ))
+      }
     </div>
 
-    <div>
-      </article>
-      <article id="porte-garage">
-
-        <h3>
-    PORTE DE GARAGE
-  </h3>
-  <div class="products">
-        {cardsData.porteGarage.map((item) => (
-          <div  class="card">
-            <figure>
-        <img src={item.img} alt={item.title}>
-       </figure>
-       <h4>
-         {item.title}
-       </h4>
+    <div></div>
+    <article id="porte-garage">
+      <h3>PORTE DE GARAGE</h3>
+      <div class="products">
+        {
+          cardsData.porteGarage.map((item) => (
+            <div class="card">
+              <figure>
+                <img src={item.img} alt={item.title} />
+              </figure>
+              <h4>{item.title}</h4>
             </div>
-          
-        ))}
+          ))
+        }
       </div>
-      </div>
-      </article>
+    </article>
+  </article>
 </section>
-
 
 <style>
   section {
@@ -135,15 +121,16 @@
     flex-direction: column;
     gap: 10rem;
   }
-  
+
   article {
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
   }
 
   .products {
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
   }
@@ -155,6 +142,19 @@
   }
 
   h3 {
-    color: var(--accent);
+    color: var(--text);
+    position: relative;
+    display: inline-block;
+
+
+  }
+  h3::before {
+    content: "";
+    position: absolute;
+    height: 2px ;
+    width: 100%;
+    display: block;
+    background-color: var(--accent);
+    bottom: -3px;
   }
 </style>
